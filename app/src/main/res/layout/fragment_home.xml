@@ -7,8 +7,10 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="ExtraText">
 
+        <!-- Header Text -->
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
@@ -23,6 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- SearchView -->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="0dp"
@@ -36,5 +39,191 @@
             <requestFocus />
         </androidx.appcompat.widget.SearchView>
 
+        <!-- GridLayout for Images and Text on the Right and Vertical -->
+
+        <GridLayout
+            android:id="@+id/imageGridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="240dp"
+            android:columnCount="1"
+            android:rowCount="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView">
+
+            <!-- First Image and Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <!-- Image -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sample_image1" />
+
+                <!-- Text and Price -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <!-- Item Name -->
+                    <TextView
+                        android:id="@+id/item_name_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 1"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <!-- Price -->
+                    <TextView
+                        android:id="@+id/price_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$10.99"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Second Image and Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <!-- Image -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sample_image2" />
+
+                <!-- Text and Price -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <!-- Item Name -->
+                    <TextView
+                        android:id="@+id/item_name_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 2"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <!-- Price -->
+                    <TextView
+                        android:id="@+id/price_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$12.99"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Third Image and Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <!-- Image -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sample_image3" />
+
+                <!-- Text and Price -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <!-- Item Name -->
+                    <TextView
+                        android:id="@+id/item_name_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 3"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <!-- Price -->
+                    <TextView
+                        android:id="@+id/price_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$14.99"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Fourth Image and Text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <!-- Image -->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sample_image4" />
+
+                <!-- Text and Price -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:orientation="vertical">
+
+                    <!-- Item Name -->
+                    <TextView
+                        android:id="@+id/item_name_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Item 4"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <!-- Price -->
+                    <TextView
+                        android:id="@+id/price_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$9.99"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>
