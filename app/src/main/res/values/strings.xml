@@ -9,4 +9,5 @@
     <string name="change_profile_picture">Change Profile Picture</string>
     <string name="account_name">ACCOUNT NAME</string>
     <string name="logout">Logout</string>
+    <string name="not_a_user_register_here">Not a User? Register here</string>
 </resources>
