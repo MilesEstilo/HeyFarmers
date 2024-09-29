@@ -3,8 +3,6 @@ package com.example.heyfarmers;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Home extends AppCompatActivity {
@@ -21,6 +19,8 @@ public class Home extends AppCompatActivity {
                 selectedFragment = new HomeFragment();
             } else if (item.getItemId() == R.id.nav_profile) {
                 selectedFragment = new ProfileFragment();
+            } else if (item.getItemId() == R.id.nav_explore) {
+                selectedFragment = new ExploreFragment(); // New ExploreFragment
             }
 
             if (selectedFragment != null) {
