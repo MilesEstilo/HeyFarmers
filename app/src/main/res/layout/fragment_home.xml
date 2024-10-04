@@ -40,13 +40,11 @@
         </androidx.appcompat.widget.SearchView>
 
         <!-- GridLayout for Images and Text on the Right and Vertical -->
-
         <GridLayout
             android:id="@+id/imageGridLayout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:layout_marginEnd="240dp"
             android:columnCount="1"
             android:rowCount="4"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +52,8 @@
 
             <!-- First Image and Text -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/productLayout1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
@@ -96,7 +95,8 @@
 
             <!-- Second Image and Text -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/productLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
@@ -138,7 +138,8 @@
 
             <!-- Third Image and Text -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/productLayout3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
@@ -180,7 +181,8 @@
 
             <!-- Fourth Image and Text -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/productLayout4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:orientation="horizontal">
@@ -221,7 +223,6 @@
             </LinearLayout>
 
         </GridLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
