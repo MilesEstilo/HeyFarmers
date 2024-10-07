@@ -35,20 +35,42 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textView2">
-            <requestFocus />
-        </androidx.appcompat.widget.SearchView>
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            android:background="@drawable/search_view_background"
+            app:iconifiedByDefault="false"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            app:layout_constraintVertical_bias="0.2"
+            app:queryBackground="@android:color/transparent"
+            app:searchHintIcon="@android:color/transparent"/>
 
-        <!-- GridLayout for Images and Text on the Right and Vertical -->
+
+
+
+        <!-- "TOP FEATURED" Label -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/hometextcolor"
+            android:text="TOP FEATURED"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchView" />
+
+        <!-- GridLayout for Images and Text -->
         <GridLayout
             android:id="@+id/imageGridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:columnCount="1"
             android:rowCount="4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchView">
+            app:layout_constraintTop_toBottomOf="@id/textView">
 
             <!-- First Image and Text -->
             <LinearLayout
@@ -62,7 +84,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/sample_image1" />
+                    android:src="@drawable/goldmine" />
 
                 <!-- Text and Price -->
                 <LinearLayout
@@ -76,7 +98,7 @@
                         android:id="@+id/item_name_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Item 1"
+                        android:text="Goldmine Healthy Brown Rice"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
@@ -85,12 +107,10 @@
                         android:id="@+id/price_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$10.99"
-                        android:textColor="@android:color/holo_green_dark"
+                        android:text="₱1,450.00"
+                        android:textColor="#2E7D32"
                         android:textSize="14sp" />
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <!-- Second Image and Text -->
@@ -105,7 +125,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/sample_image2" />
+                    android:src="@drawable/jasmine" />
 
                 <!-- Text and Price -->
                 <LinearLayout
@@ -119,7 +139,7 @@
                         android:id="@+id/item_name_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Item 2"
+                        android:text="Jasmine Fragrant Rice"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
@@ -128,12 +148,10 @@
                         android:id="@+id/price_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$12.99"
-                        android:textColor="@android:color/holo_green_dark"
+                        android:text="₱1,600.00"
+                        android:textColor="#2E7D32"
                         android:textSize="14sp" />
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <!-- Third Image and Text -->
@@ -148,7 +166,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/sample_image3" />
+                    android:src="@drawable/harverst" />
 
                 <!-- Text and Price -->
                 <LinearLayout
@@ -162,7 +180,7 @@
                         android:id="@+id/item_name_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Item 3"
+                        android:text="Harvester's Long Rice"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
@@ -171,12 +189,10 @@
                         android:id="@+id/price_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$14.99"
-                        android:textColor="@android:color/holo_green_dark"
+                        android:text="₱2,050.00"
+                        android:textColor="#2E7D32"
                         android:textSize="14sp" />
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <!-- Fourth Image and Text -->
@@ -191,7 +207,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/sample_image4" />
+                    android:src="@drawable/blackrice" />
 
                 <!-- Text and Price -->
                 <LinearLayout
@@ -205,7 +221,7 @@
                         android:id="@+id/item_name_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Item 4"
+                        android:text="Healthy Black Rice"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
@@ -214,16 +230,11 @@
                         android:id="@+id/price_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="$9.99"
-                        android:textColor="@android:color/holo_green_dark"
+                        android:text="₱310.00"
+                        android:textColor="#2E7D32"
                         android:textSize="14sp" />
-
                 </LinearLayout>
-
             </LinearLayout>
-
         </GridLayout>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </FrameLayout>

@@ -12,16 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HeyFarmers"
         tools:targetApi="31">
+
+        <!-- MainActivity is your launcher activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Home activity -->
         <activity android:name=".Home" />
+
+        <!-- RegistrationActivity added here -->
+        <activity android:name=".RegistrationActivity" />
+
     </application>
 
 </manifest>

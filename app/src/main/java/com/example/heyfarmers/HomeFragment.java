@@ -27,10 +27,41 @@ public class HomeFragment extends Fragment {
         LinearLayout productLayout4 = view.findViewById(R.id.productLayout4);
 
         // Set click listeners for each product layout
-        productLayout1.setOnClickListener(v -> showProductDialog("Item 1", "$10.99", "This is a short description of Item 1", R.drawable.sample_image1));
-        productLayout2.setOnClickListener(v -> showProductDialog("Item 2", "$12.99", "This is a short description of Item 2", R.drawable.sample_image2));
-        productLayout3.setOnClickListener(v -> showProductDialog("Item 3", "$14.99", "This is a short description of Item 3", R.drawable.sample_image3));
-        productLayout4.setOnClickListener(v -> showProductDialog("Item 4", "$9.99", "This is a short description of Item 4", R.drawable.sample_image4));
+        productLayout1.setOnClickListener(v -> showProductDialog(
+                "Goldmine Healthy Brown Rice 25KG", // Update the product name
+                "₱1,450.00", // Update the product price
+                "Premium quality brown rice from the Philippines.", // Update description
+                R.drawable.goldmine // Ensure this is the correct image
+        ));
+
+        productLayout2.setOnClickListener(v -> showProductDialog(
+                "Jasmine Fragrant Rice 25KG",
+                "₱1,600.00",
+                "Premium quality rice from the Philippines.",
+                R.drawable.jasmine
+        ));
+
+        productLayout3.setOnClickListener(v -> showProductDialog(
+                "Harvester's Long Grain Rice 25KG",
+                "₱2,050.00",
+                "Harvester’s Long Grain Rice is a long slender variety of rice. When cooked it has a light and fluffy characteristic that people love!\n" +
+                        "For Filipinos, we love that “buhaghag” type of rice.",
+                R.drawable.harverst
+        ));
+
+        productLayout4.setOnClickListener(v -> showProductDialog(
+                "Healthy Grains Organic Black Rice",
+                "₱310.00",
+                "Bio-organically grown black rice.\n" +
+                        "High in fiber and antioxidants; rich in iron.\n" +
+                        "Good for lactating mothers.\n" +
+                        "For digestive and cardiovascular health.\n" +
+                        "Helps prevent and control diabetes, obesity, and high cholesterol.\n" +
+                        "Export quality.\n" +
+                        "Chemical-free.\n" +
+                        "Gluten-Free.",
+                R.drawable.blackrice
+        ));
 
         return view;
     }

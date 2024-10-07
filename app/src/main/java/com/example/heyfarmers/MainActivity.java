@@ -34,5 +34,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        // Handle the Register button click
+        Button registerButton = findViewById(R.id.button3);
+        if (registerButton != null) {
+            registerButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Navigate to the RegistrationActivity
+                    Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 }
