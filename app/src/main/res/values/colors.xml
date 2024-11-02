@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- res/values/colors.xml -->
 <resources>
-    <color name="my_color">#FFFFFF</color> <!-- Background color -->
-    <color name="button_color">#6FB5D0</color> <!-- Custom button color -->
-    <color name="colorPrimary">#6FB5D0</color> <!-- Primary color for consistency -->
-    <color name="colorPrimaryDark">#5EA3BC</color> <!-- A darker shade for status bar or accents if needed -->
-    <color name="colorAccent">#6FB5D0</color> <!-- Accent color -->
-
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="my_color">#FEF6E3</color>
+    <color name="my_screen_color">#FEF6E3</color>
+    <color name="hometextcolor">#436F7F</color>
 </resources>
-
-
