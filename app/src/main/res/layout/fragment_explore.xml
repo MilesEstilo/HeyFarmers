@@ -8,10 +8,7 @@
     android:padding="16dp"
     android:gravity="center">
 
-
     <!-- Title or header -->
-
-    <!-- GridLayout for product items -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -23,6 +20,7 @@
         android:textSize="45sp"
         android:textStyle="bold" />
 
+    <!-- GridLayout for product items -->
     <GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="match_parent"
@@ -78,6 +76,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:paddingTop="4dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/buttonAddProduct1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="+ Add"
+                    android:paddingTop="8dp"
+                    android:backgroundTint="@color/button_color" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -127,8 +135,20 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:paddingTop="4dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/buttonAddProduct2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="+ Add"
+                    android:paddingTop="8dp"
+                    android:backgroundTint="@color/button_color" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <!-- Similar updates for Product 3 and Product 4 with backgroundTint -->
 
         <!-- Third product -->
         <androidx.cardview.widget.CardView
@@ -176,6 +196,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:paddingTop="4dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/buttonAddProduct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="+ Add"
+                    android:paddingTop="8dp"
+                    android:backgroundTint="@color/button_color" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -225,6 +255,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:paddingTop="4dp" />
+
+                <!-- Add Button -->
+                <Button
+                    android:id="@+id/buttonAddProduct4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="+ Add"
+                    android:paddingTop="8dp"
+                    android:backgroundTint="@color/button_color" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
