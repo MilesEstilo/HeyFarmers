@@ -41,12 +41,29 @@
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
 
-    <!-- Close Button -->
-    <Button
-        android:id="@+id/close_button"
+    <!-- Button Container for Add and Close Buttons -->
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Close"
+        android:orientation="horizontal"
         android:layout_gravity="end"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp">
+
+        <!-- Add Button with Custom Background Tint -->
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:backgroundTint="@color/button_color"/>
+
+        <!-- Close Button with Custom Background Tint -->
+        <Button
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Close"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/button_color"/>
+    </LinearLayout>
 </LinearLayout>
