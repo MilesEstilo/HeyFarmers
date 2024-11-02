@@ -46,7 +46,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-
         <EditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="0dp"
@@ -64,6 +63,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <!-- Login Button -->
         <Button
             android:id="@+id/button"
             android:layout_width="210dp"
@@ -72,10 +72,12 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="112dp"
             android:text="@string/button_text"
+            android:backgroundTint="#6FB5D0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
+        <!-- Register Button -->
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
@@ -84,9 +86,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="98dp"
             android:text="@string/not_a_user_register_here"
+            android:backgroundTint="#6FB5D0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
