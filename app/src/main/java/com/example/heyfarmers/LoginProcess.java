@@ -1,11 +1,13 @@
 package com.example.heyfarmers;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.json.JSONException;
@@ -22,44 +24,38 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginProcess extends AppCompatActivity {
 
-    private EditText editTextEmail, editTextPassword;
-    private Button loginButton, registerButton;
+    private EditText emailEditText;
+    private EditText passwordEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the views
-        editTextEmail = findViewById(R.id.editTextTextEmailAddress);
-        editTextPassword = findViewById(R.id.editTextTextPassword);
-        loginButton = findViewById(R.id.button);
-        registerButton = findViewById(R.id.button3);
+        emailEditText = findViewById(R.id.editTextTextEmailAddress);
+        passwordEditText = findViewById(R.id.editTextTextPassword);
+        Button loginButton = findViewById(R.id.button);
+        Button registerButton = findViewById(R.id.button3);
 
-        // Set click listener for the login button
-        loginButton.setOnClickListener(v -> {
-            String email = editTextEmail.getText().toString();
-            String password = editTextPassword.getText().toString();
+        loginButton.setOnClickListener(v -> loginUser());
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(MainActivity.this, "Please enter both email and password", Toast.LENGTH_SHORT).show();
-            } else {
-                loginUser(email, password);
-            }
-        });
-
-        // Set click listener for the register button
         registerButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, RegistrationActivity.class);
+            Intent intent = new Intent(LoginProcess.this, RegistrationActivity.class);
             startActivity(intent);
-            finish();
         });
     }
 
-    private void loginUser(String email, String password) {
-        // Run network request to validate the login credentials
+    private void loginUser() {
+        String email = emailEditText.getText().toString().trim();
+        String password = passwordEditText.getText().toString().trim();
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Email and Password are required", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         new Thread(() -> {
             try {
                 URL url = new URL("http://pzf.22b.mytemp.website/api/validate.php");
@@ -94,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
             } catch (Exception e) {
                 e.printStackTrace();
-                runOnUiThread(() -> Toast.makeText(MainActivity.this, "Login failed: " + e.getMessage(), Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> Toast.makeText(this, "Login failed: " + e.getMessage(), Toast.LENGTH_SHORT).show());
             }
         }).start();
     }
@@ -106,20 +102,20 @@ public class MainActivity extends AppCompatActivity {
             String message = jsonResponse.getString("message");
 
             if (success) {
-                // Store login status in shared preferences
-                getSharedPreferences("app_prefs", MODE_PRIVATE).edit().putBoolean("user_login", true).apply();
+                SharedPreferences sharedPreferences = getSharedPreferences("app_prefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("user_login", true);
+                editor.apply();
 
-                // Redirect to Home activity after successful login
-                Intent intent = new Intent(MainActivity.this, Home.class);
+                Intent intent = new Intent(LoginProcess.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             } else {
-                // Display failure message
-                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();
-            Toast.makeText(MainActivity.this, "Invalid response format", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid response format", Toast.LENGTH_SHORT).show();
         }
     }
 }
